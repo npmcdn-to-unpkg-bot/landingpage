@@ -1,0 +1,46 @@
+.intro{
+margin-top: 6em;
+
+  .intro__logo{
+    width: 100%;
+    padding: 4em 0 0;
+
+    img{
+      display: block;
+      max-width: 175px;
+      margin: 0 auto;
+    }
+  }
+  .intro__title{
+   text-align: center;
+  }
+  .intro__tagline{
+    text-align: center;
+  }
+}
+
+
+.collectEmail{
+  width: 100%;
+  padding: 2em 0;
+
+  .collectEmail__container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    input{
+
+      display: inline-block;
+      width: 75%;
+    }
+    button{
+      display: inline-block;
+      width: 20%;
+
+    }
+    p{
+      text-align: center;
+    }
+  }
+}

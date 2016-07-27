@@ -93,8 +93,8 @@ module.exports = function(grunt) {
                 files: 'app/js/**/*.js',
                 tasks: ['uglify:dev']
             },
-            sass: {
-                files: 'app/sass/**/*',
+            scss: {
+                files: 'app/scss/**/*',
                 tasks: ['compass:dev']
             },
             livereload: {

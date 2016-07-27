@@ -1,0 +1,43 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .header__container{
+    width: 100%;
+    max-width: 1280px;
+    padding: 1em 0;
+    margin: 0 auto;
+
+    .logo{
+      height: 72px;
+      display: inline-block;
+      margin: 0 auto;
+
+      img{
+        height: 80%;
+        display: inline-block;
+        margin: auto;
+      }
+//      h3{
+//        margin: 0;
+//        display: inline-block;
+//      }
+    }
+
+    .links{
+      float: right;
+      display: inline-block;
+
+      .links__list{
+        list-style: none;
+
+        .links__list__item{
+          display: inline-block;
+          margin-left: 3em;
+        }
+      }
+    }
+  }
+}

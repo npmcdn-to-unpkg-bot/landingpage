@@ -1,6 +1,9 @@
 @import 'colors';
 @import 'fonts';
+@import 'header';
+@import 'index';
 
-.test{
-  background-color: $gray;
+body{
+  font-family: caSansRegular, sans-serif;
 }
+

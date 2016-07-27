@@ -1,4 +1,105 @@
-/* line 4, ../scss/all.scss */
-.test {
-  background-color: blue;
+@font-face {
+  font-family: "caSansRegular";
+  src: url("../fonts/ca-sans-regular.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "caSansBold";
+  src: url("../fonts/ca-sans-bold.ttf");
+  font-weight: 700;
+}
+/* line 1, ../scss/_header.scss */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* line 7, ../scss/_header.scss */
+.header .header__container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 1em 0;
+  margin: 0 auto;
+}
+/* line 13, ../scss/_header.scss */
+.header .header__container .logo {
+  height: 72px;
+  display: inline-block;
+  margin: 0 auto;
+}
+/* line 18, ../scss/_header.scss */
+.header .header__container .logo img {
+  height: 80%;
+  display: inline-block;
+  margin: auto;
+}
+/* line 29, ../scss/_header.scss */
+.header .header__container .links {
+  float: right;
+  display: inline-block;
+}
+/* line 33, ../scss/_header.scss */
+.header .header__container .links .links__list {
+  list-style: none;
+}
+/* line 36, ../scss/_header.scss */
+.header .header__container .links .links__list .links__list__item {
+  display: inline-block;
+  margin-left: 3em;
+}
+
+/* line 1, ../scss/_index.scss */
+.intro {
+  margin-top: 6em;
+}
+/* line 4, ../scss/_index.scss */
+.intro .intro__logo {
+  width: 100%;
+  padding: 4em 0 0;
+}
+/* line 8, ../scss/_index.scss */
+.intro .intro__logo img {
+  display: block;
+  max-width: 175px;
+  margin: 0 auto;
+}
+/* line 14, ../scss/_index.scss */
+.intro .intro__title {
+  text-align: center;
+}
+/* line 17, ../scss/_index.scss */
+.intro .intro__tagline {
+  text-align: center;
+}
+
+/* line 23, ../scss/_index.scss */
+.collectEmail {
+  width: 100%;
+  padding: 2em 0;
+}
+/* line 27, ../scss/_index.scss */
+.collectEmail .collectEmail__container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* line 32, ../scss/_index.scss */
+.collectEmail .collectEmail__container input {
+  display: inline-block;
+  width: 75%;
+}
+/* line 37, ../scss/_index.scss */
+.collectEmail .collectEmail__container button {
+  display: inline-block;
+  width: 20%;
+}
+/* line 42, ../scss/_index.scss */
+.collectEmail .collectEmail__container p {
+  text-align: center;
+}
+
+/* line 6, ../scss/all.scss */
+body {
+  font-family: caSansRegular, sans-serif;
 }
