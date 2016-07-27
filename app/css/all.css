@@ -52,49 +52,51 @@
 /* line 1, ../scss/_index.scss */
 .intro {
   margin-top: 6em;
+  background-color: #fafafa;
+  background-image: repeating-linear-gradient(29deg, transparent, transparent 18px, transparent 18px, #e1e1e1 20px), repeating-linear-gradient(-29deg, transparent, transparent 18px, transparent 18px, #e1e1e1 20px);
 }
-/* line 4, ../scss/_index.scss */
+/* line 7, ../scss/_index.scss */
 .intro .intro__logo {
   width: 100%;
   padding: 4em 0 0;
 }
-/* line 8, ../scss/_index.scss */
+/* line 11, ../scss/_index.scss */
 .intro .intro__logo img {
   display: block;
   max-width: 175px;
   margin: 0 auto;
 }
-/* line 14, ../scss/_index.scss */
+/* line 17, ../scss/_index.scss */
 .intro .intro__title {
   text-align: center;
 }
-/* line 17, ../scss/_index.scss */
+/* line 20, ../scss/_index.scss */
 .intro .intro__tagline {
   text-align: center;
 }
 
-/* line 23, ../scss/_index.scss */
+/* line 26, ../scss/_index.scss */
 .collectEmail {
   width: 100%;
   padding: 2em 0;
 }
-/* line 27, ../scss/_index.scss */
+/* line 30, ../scss/_index.scss */
 .collectEmail .collectEmail__container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
-/* line 32, ../scss/_index.scss */
+/* line 35, ../scss/_index.scss */
 .collectEmail .collectEmail__container input {
   display: inline-block;
   width: 75%;
 }
-/* line 37, ../scss/_index.scss */
+/* line 40, ../scss/_index.scss */
 .collectEmail .collectEmail__container button {
   display: inline-block;
   width: 20%;
 }
-/* line 42, ../scss/_index.scss */
+/* line 45, ../scss/_index.scss */
 .collectEmail .collectEmail__container p {
   text-align: center;
 }

@@ -1,6 +1,9 @@
 .intro{
 margin-top: 6em;
 
+  background-color: $gray;
+  background-image: repeating-linear-gradient(29deg, transparent, transparent 18px , transparent 18px, rgba(225,225,225,1) 20px), repeating-linear-gradient(-29deg, transparent, transparent 18px , transparent 18px, rgba(225,225,225,1) 20px);
+
   .intro__logo{
     width: 100%;
     padding: 4em 0 0;
