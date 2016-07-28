@@ -3,11 +3,13 @@
   top: 0;
   left: 0;
   width: 100%;
+  background-color: $white;
+  z-index: 9001;
 
   .header__container{
     width: 100%;
     max-width: 1280px;
-    padding: 1em 0;
+    padding: 1em 0 .8em;
     margin: 0 auto;
 
     .logo{

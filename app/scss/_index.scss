@@ -1,9 +1,21 @@
+.mainContainer{
+  background-image: linear-gradient(to bottom, white, transparent 240px, transparent), repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(225,225,225,.6) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(225,225,225,.6) 25px);
+}
+
+.landing-section{
+  z-index: 1;
+  .inner-section{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
 .intro{
 margin-top: 6em;
-
-  background-color: $gray;
-  background-image: repeating-linear-gradient(29deg, transparent, transparent 18px , transparent 18px, rgba(225,225,225,1) 20px), repeating-linear-gradient(-29deg, transparent, transparent 18px , transparent 18px, rgba(225,225,225,1) 20px);
-
+padding: 3em 0 300px;
+background-image: linear-gradient(to bottom, transparent 80%, #4A3764),repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(72,243,219,.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(72,435,195,.1) 25px),linear-gradient(to top, #4A3764, #6150C1);
+color: $white;
   .intro__logo{
     width: 100%;
     padding: 4em 0 0;
@@ -20,6 +32,18 @@ margin-top: 6em;
   .intro__tagline{
     text-align: center;
   }
+}
+
+
+.sub-intro {
+  padding: 10em 0 13em;
+  text-align: center;
+  background-color: #4A3764;
+  color: $white;
+}
+
+.build{
+  padding: 400px 0 6em;
 }
 
 
