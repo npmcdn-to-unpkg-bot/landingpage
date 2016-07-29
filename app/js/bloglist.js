@@ -49,6 +49,10 @@
         imgField.appendChild(image);
         imgField.setAttribute("class","blog-featureimg");
 
+        var contentWrapper = createTextDiv("content-wrapper",null);
+
+        var createWrapper  = createTextDiv("create-wrapper",null);
+
         var authorField = createTextDiv("blog-author",author);
 
         var dateField = createTextDiv("blog-date",date);
@@ -62,17 +66,19 @@
 
         form.appendChild(idField);
         form.appendChild(imgField);
-        form.appendChild(titleField);
-        form.appendChild(authorField);
-        form.appendChild(dateField);
-        form.appendChild(descField);
+        contentWrapper.appendChild(titleField);
+        createWrapper.appendChild(authorField);
+        createWrapper.appendChild(dateField);
+        contentWrapper.appendChild(createWrapper);
+        contentWrapper.appendChild(descField);
+        form.appendChild(contentWrapper);
         card.appendChild(form);
         blogListSpace.appendChild(card);
     }
 
     function createTextDiv (divClass, html){
         var newDiv = document.createElement("div");
-        newDiv.innerHTML = html;
+        if(html) newDiv.innerHTML = html;
         newDiv.setAttribute("class",divClass);
         return newDiv;
     }
