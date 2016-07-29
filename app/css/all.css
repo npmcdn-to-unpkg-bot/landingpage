@@ -238,12 +238,12 @@ small, .font_small {
   padding: 0 .5em;
 }
 
-/* line 8, ../scss/all.scss */
+/* line 10, ../scss/all.scss */
 html {
   font-size: 1em;
 }
 
-/* line 10, ../scss/all.scss */
+/* line 12, ../scss/all.scss */
 body {
   font-weight: 400;
   line-height: 1.45;
