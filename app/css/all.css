@@ -238,12 +238,135 @@ small, .font_small {
   padding: 0 .5em;
 }
 
-/* line 8, ../scss/all.scss */
+/* line 1, ../scss/_bloglist.scss */
+.blogs-page-header {
+  padding: 10px;
+}
+
+/* line 5, ../scss/_bloglist.scss */
+.blog-list .blog-card {
+  display: inline-block;
+  width: 400px;
+  margin: 10px;
+  height: 300px;
+  overflow: hidden;
+  background: #fff;
+}
+/* line 14, ../scss/_bloglist.scss */
+.blog-list .blog-card form {
+  width: 100%;
+  height: 100%;
+}
+/* line 18, ../scss/_bloglist.scss */
+.blog-list .blog-card .blog-featureimg {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 23, ../scss/_bloglist.scss */
+.blog-list .blog-card .blog-featureimg img {
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+/* line 32, ../scss/_bloglist.scss */
+.blog-list .blog-card .content-wrapper {
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+/* line 37, ../scss/_bloglist.scss */
+.blog-list .blog-card .content-wrapper .blog-title {
+  height: 25%;
+  line-height: 100%;
+  font-size: 32px;
+  font-weight: bold;
+  background: 0;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+/* line 47, ../scss/_bloglist.scss */
+.blog-list .blog-card .content-wrapper .create-wrapper {
+  height: 25%;
+  width: 100%;
+  font-size: 18px;
+}
+/* line 51, ../scss/_bloglist.scss */
+.blog-list .blog-card .content-wrapper .create-wrapper .blog-author {
+  display: inline-block;
+  width: 50%;
+}
+/* line 55, ../scss/_bloglist.scss */
+.blog-list .blog-card .content-wrapper .create-wrapper .blog-date {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+/* line 61, ../scss/_bloglist.scss */
+.blog-list .blog-card .content-wrapper .blog-desc {
+  width: 100%;
+  height: 50%;
+  text-overflow: ellipsis;
+}
+
+/* line 1, ../scss/_blog.scss */
+.blog-content-wrapper {
+  width: 100%;
+  height: 100%;
+}
+/* line 4, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 7, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content #image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 12, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content #image img {
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+/* line 22, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content .text-wrapper .metadata {
+  background: #eee;
+  padding: 10px;
+}
+/* line 26, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content .text-wrapper .metadata #title {
+  font-size: 72px;
+}
+/* line 29, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content .text-wrapper .metadata #desc {
+  font-size: 30px;
+}
+/* line 32, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content .text-wrapper .metadata .create-info {
+  font-size: 20px;
+}
+/* line 37, ../scss/_blog.scss */
+.blog-content-wrapper .blog-content #post {
+  padding: 10px;
+}
+
+/* line 10, ../scss/all.scss */
 html {
   font-size: 1em;
 }
 
-/* line 10, ../scss/all.scss */
+/* line 12, ../scss/all.scss */
 body {
   font-weight: 400;
   line-height: 1.45;
