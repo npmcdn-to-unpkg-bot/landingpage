@@ -14,7 +14,7 @@
 .intro{
 margin-top: 6em;
 padding: 3em 0 300px;
-background-image: linear-gradient(to bottom, transparent 80%, #4A3764),repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(72,243,219,.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(72,435,195,.1) 25px),linear-gradient(to top, #4A3764, #6150C1);
+background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(72,243,219,.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(72,435,195,.1) 25px),linear-gradient(to top, $purple, $blue);
 color: $white;
   .intro__logo{
     width: 100%;
@@ -38,7 +38,7 @@ color: $white;
 .sub-intro {
   padding: 10em 0 13em;
   text-align: center;
-  background-color: #4A3764;
+  background-color: $blue;
   color: $white;
 }
 
@@ -75,24 +75,35 @@ color: $white;
 .collectEmail{
   width: 100%;
   padding: 2em 0;
+  background-color: $purple;
+  color: $white;
+
+  background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(72,243,219,.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(72,435,195,.1) 25px);
+
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,0.3);
 
   .collectEmail__container{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 8em 0;
 
-    input{
-
-      display: inline-block;
-      width: 75%;
-    }
-    button{
-      display: inline-block;
-      width: 20%;
-
-    }
-    p{
+    h4{
+      color: $gray;
       text-align: center;
+    }
+
+    .email__field{
+      display: flex;
+
+      .email{
+        flex: 1;
+        margin-right: auto;
+        font-size: 1.999em;
+      }
+      .submit{
+
+      }
     }
   }
 }
