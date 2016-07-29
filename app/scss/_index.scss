@@ -37,7 +37,6 @@ color: $white;
 
 .sub-intro {
   padding: 10em 0 13em;
-  text-align: center;
   background-color: $blue;
   color: $white;
 }
@@ -89,7 +88,7 @@ color: $white;
     padding: 8em 0;
 
     h4{
-      color: $gray;
+      color: $light-gray;
       text-align: center;
     }
 
@@ -98,11 +97,30 @@ color: $white;
 
       .email{
         flex: 1;
+        color: $dark-gray;
         margin-right: auto;
         font-size: 1.999em;
+        padding-left: .5em;
+
+        &::-webkit-input-placeholder{
+          color: $gray;
+        }
+        &:-ms-input-placeholder{
+          color: $gray;
+        }
+        &::-moz-placeholder{
+            color: $gray;
+        }
+        &:-moz-placeholder{
+          color: $gray;
+        }
       }
       .submit{
-
+        color: $white;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        background-color: $green;
+        padding: 0 .5em;
       }
     }
   }

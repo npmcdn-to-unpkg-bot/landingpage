@@ -12,16 +12,16 @@ module.exports = function(grunt) {
         },
 
         uglify: {
-            dev: {
-                options: {
-                  mangle: false,
-                  compress: false,
-                  beautify: true
-                },
-                files: {
-                    'app/js/main.min.js': ['app/js/*.js', 'app/js/vendor/*.js']
-                }
-            },
+            // dev: {
+            //     options: {
+            //       mangle: false,
+            //       compress: false,
+            //       beautify: true
+            //     },
+            //     files: {
+            //         'app/js/main.min.js': ['app/js/*.js', 'app/js/vendor/*.js']
+            //     }
+            // },
             prod: {
                 options: {
                     mangle: false,
@@ -89,10 +89,6 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            js: {
-                files: 'app/js/**/*.js',
-                tasks: ['uglify:dev']
-            },
             scss: {
                 files: 'app/scss/**/*',
                 tasks: ['compass:dev']
@@ -120,6 +116,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('dev', ['jshint', 'uglify:dev', 'compass:dev', 'connect', 'watch']);
+    grunt.registerTask('dev', ['jshint', 'compass:dev', 'connect', 'watch']);
     grunt.registerTask('prod', ['clean', 'jshint', 'compass:prod', 'uglify:prod', 'copy']);
 };
