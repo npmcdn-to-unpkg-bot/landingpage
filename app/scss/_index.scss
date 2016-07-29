@@ -42,9 +42,34 @@ color: $white;
   color: $white;
 }
 
-.build{
-  padding: 400px 0 6em;
+.build, .bake, .test, .deploy{
+  padding: 200px 0 0;
+
+  .inner-section{
+    display: flex;
+
+    .section__text{
+      display: block;
+      flex: 5;
+    }
+
+    .section__image{
+      flex: 5;
+
+        img{
+          display: block;
+          margin: 0 auto;
+        }
+    }
+  }
 }
+
+.bake, .deploy{
+  .inner-section{
+    flex-direction: row-reverse;
+  }
+}
+
 
 
 .collectEmail{

@@ -54,36 +54,38 @@ small, .font_small {
   width: 100%;
   background-color: white;
   z-index: 9001;
+  opacity: .98;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
-/* line 9, ../scss/_header.scss */
+/* line 11, ../scss/_header.scss */
 .header .header__container {
   width: 100%;
   max-width: 1280px;
   padding: 1em 0 .8em;
   margin: 0 auto;
 }
-/* line 15, ../scss/_header.scss */
+/* line 17, ../scss/_header.scss */
 .header .header__container .logo {
   height: 72px;
   display: inline-block;
   margin: 0 auto;
 }
-/* line 20, ../scss/_header.scss */
+/* line 22, ../scss/_header.scss */
 .header .header__container .logo img {
   height: 80%;
   display: inline-block;
   margin: auto;
 }
-/* line 31, ../scss/_header.scss */
+/* line 33, ../scss/_header.scss */
 .header .header__container .links {
   float: right;
   display: inline-block;
 }
-/* line 35, ../scss/_header.scss */
+/* line 37, ../scss/_header.scss */
 .header .header__container .links .links__list {
   list-style: none;
 }
-/* line 38, ../scss/_header.scss */
+/* line 40, ../scss/_header.scss */
 .header .header__container .links .links__list .links__list__item {
   display: inline-block;
   margin-left: 3em;
@@ -141,32 +143,55 @@ small, .font_small {
 }
 
 /* line 45, ../scss/_index.scss */
-.build {
-  padding: 400px 0 6em;
+.build, .bake, .test, .deploy {
+  padding: 200px 0 0;
+}
+/* line 48, ../scss/_index.scss */
+.build .inner-section, .bake .inner-section, .test .inner-section, .deploy .inner-section {
+  display: flex;
+}
+/* line 51, ../scss/_index.scss */
+.build .inner-section .section__text, .bake .inner-section .section__text, .test .inner-section .section__text, .deploy .inner-section .section__text {
+  display: block;
+  flex: 5;
+}
+/* line 56, ../scss/_index.scss */
+.build .inner-section .section__image, .bake .inner-section .section__image, .test .inner-section .section__image, .deploy .inner-section .section__image {
+  flex: 5;
+}
+/* line 59, ../scss/_index.scss */
+.build .inner-section .section__image img, .bake .inner-section .section__image img, .test .inner-section .section__image img, .deploy .inner-section .section__image img {
+  display: block;
+  margin: 0 auto;
 }
 
-/* line 50, ../scss/_index.scss */
+/* line 68, ../scss/_index.scss */
+.bake .inner-section, .deploy .inner-section {
+  flex-direction: row-reverse;
+}
+
+/* line 75, ../scss/_index.scss */
 .collectEmail {
   width: 100%;
   padding: 2em 0;
 }
-/* line 54, ../scss/_index.scss */
+/* line 79, ../scss/_index.scss */
 .collectEmail .collectEmail__container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
-/* line 59, ../scss/_index.scss */
+/* line 84, ../scss/_index.scss */
 .collectEmail .collectEmail__container input {
   display: inline-block;
   width: 75%;
 }
-/* line 64, ../scss/_index.scss */
+/* line 89, ../scss/_index.scss */
 .collectEmail .collectEmail__container button {
   display: inline-block;
   width: 20%;
 }
-/* line 69, ../scss/_index.scss */
+/* line 94, ../scss/_index.scss */
 .collectEmail .collectEmail__container p {
   text-align: center;
 }
