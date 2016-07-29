@@ -36,9 +36,30 @@ color: $white;
 
 
 .sub-intro {
-  padding: 10em 0 13em;
   background-color: $blue;
   color: $white;
+  display: flex;
+
+  .left{
+    flex: 1;
+    padding: 6em 4em;
+  }
+  .right{
+    flex: 1;
+    background-image: linear-gradient(to right, $blue, transparent 110%),url("../img/integrations.png");
+    background-size: cover;
+    background-position: 100px auto;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+   h2{
+     flex: 1;
+     margin-right: 5em;
+   }
+
+
+  }
 }
 
 .build, .bake, .test, .deploy{
