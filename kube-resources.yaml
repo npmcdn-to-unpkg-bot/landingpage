@@ -23,6 +23,7 @@ spec:
     metadata:
       labels:
         app: landingpage
+      namespace: production
     spec:
       containers:
       - name: landingpage
@@ -39,6 +40,7 @@ metadata:
   labels:
     app: landingpage
   name: landingpage-service
+  namespace: production
 spec:
   ports:
   - port: 443
