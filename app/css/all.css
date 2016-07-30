@@ -63,32 +63,75 @@ small, .font_small {
   max-width: 1280px;
   padding: 1em 0 .8em;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
-/* line 17, ../scss/_header.scss */
+/* line 19, ../scss/_header.scss */
 .header .header__container .logo {
   height: 72px;
-  display: inline-block;
-  margin: 0 auto;
+  flex: 1;
 }
-/* line 22, ../scss/_header.scss */
+/* line 23, ../scss/_header.scss */
 .header .header__container .logo img {
-  height: 80%;
+  height: 100%;
   display: inline-block;
   margin: auto;
 }
-/* line 33, ../scss/_header.scss */
+@media screen and (max-width: 600px) {
+  /* line 19, ../scss/_header.scss */
+  .header .header__container .logo {
+    height: 35px;
+    margin-left: 1.5em;
+  }
+}
+/* line 35, ../scss/_header.scss */
 .header .header__container .links {
+  flex: 1;
   float: right;
   display: inline-block;
 }
-/* line 37, ../scss/_header.scss */
+/* line 40, ../scss/_header.scss */
 .header .header__container .links .links__list {
   list-style: none;
 }
-/* line 40, ../scss/_header.scss */
+/* line 43, ../scss/_header.scss */
 .header .header__container .links .links__list .links__list__item {
   display: inline-block;
   margin-left: 3em;
+}
+@media screen and (max-width: 600px) {
+  /* line 35, ../scss/_header.scss */
+  .header .header__container .links {
+    display: none;
+  }
+}
+/* line 54, ../scss/_header.scss */
+.header .header__container .menu {
+  height: 35px;
+}
+/* line 56, ../scss/_header.scss */
+.header .header__container .menu img {
+  height: 100%;
+  display: inline-block;
+  margin: auto;
+}
+@media screen and (max-width: 600px) {
+  /* line 54, ../scss/_header.scss */
+  .header .header__container .menu {
+    margin-right: 1.5em;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* line 54, ../scss/_header.scss */
+  .header .header__container .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 1, ../scss/_header.scss */
+  .header {
+    padding: 0;
+  }
 }
 
 /* line 1, ../scss/_footer.scss */
@@ -144,19 +187,25 @@ small, .font_small {
 .intro .intro__tagline {
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  /* line 14, ../scss/_index.scss */
+  .intro {
+    margin-top: 3em;
+  }
+}
 
-/* line 38, ../scss/_index.scss */
+/* line 42, ../scss/_index.scss */
 .sub-intro {
   background-color: #6150C1;
   color: white;
   display: flex;
 }
-/* line 43, ../scss/_index.scss */
+/* line 47, ../scss/_index.scss */
 .sub-intro .left {
   flex: 1;
   padding: 6em 4em;
 }
-/* line 47, ../scss/_index.scss */
+/* line 51, ../scss/_index.scss */
 .sub-intro .right {
   flex: 1;
   background-image: linear-gradient(to right, #6150C1, transparent 110%), url("../img/integrations.png");
@@ -166,41 +215,62 @@ small, .font_small {
   display: flex;
   align-items: center;
 }
-/* line 56, ../scss/_index.scss */
+/* line 60, ../scss/_index.scss */
 .sub-intro .right h2 {
   flex: 1;
   margin-right: 5em;
 }
+@media screen and (max-width: 600px) {
+  /* line 42, ../scss/_index.scss */
+  .sub-intro {
+    flex-direction: column;
+  }
+  /* line 71, ../scss/_index.scss */
+  .sub-intro .left {
+    padding: 3em 1em;
+  }
+  /* line 75, ../scss/_index.scss */
+  .sub-intro .right {
+    background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations.png");
+    background-position: auto;
+  }
+  /* line 79, ../scss/_index.scss */
+  .sub-intro .right h2 {
+    margin: 0;
+    padding: 3em 1em;
+    text-align: center;
+  }
+}
 
-/* line 65, ../scss/_index.scss */
+/* line 89, ../scss/_index.scss */
 .build, .bake, .test, .deploy {
   padding: 200px 0 0;
 }
-/* line 68, ../scss/_index.scss */
+/* line 92, ../scss/_index.scss */
 .build .inner-section, .bake .inner-section, .test .inner-section, .deploy .inner-section {
   display: flex;
 }
-/* line 71, ../scss/_index.scss */
+/* line 95, ../scss/_index.scss */
 .build .inner-section .section__text, .bake .inner-section .section__text, .test .inner-section .section__text, .deploy .inner-section .section__text {
   display: block;
   flex: 5;
 }
-/* line 76, ../scss/_index.scss */
+/* line 100, ../scss/_index.scss */
 .build .inner-section .section__image, .bake .inner-section .section__image, .test .inner-section .section__image, .deploy .inner-section .section__image {
   flex: 5;
 }
-/* line 79, ../scss/_index.scss */
+/* line 103, ../scss/_index.scss */
 .build .inner-section .section__image img, .bake .inner-section .section__image img, .test .inner-section .section__image img, .deploy .inner-section .section__image img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 88, ../scss/_index.scss */
+/* line 112, ../scss/_index.scss */
 .bake .inner-section, .deploy .inner-section {
   flex-direction: row-reverse;
 }
 
-/* line 95, ../scss/_index.scss */
+/* line 119, ../scss/_index.scss */
 .collectEmail {
   width: 100%;
   padding: 2em 0;
@@ -209,23 +279,23 @@ small, .font_small {
   background-image: linear-gradient(to bottom, transparent 80%, #4A3764), repeating-linear-gradient(29deg, transparent, transparent 23px, transparent 23px, rgba(72, 243, 219, 0.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px, transparent 23px, rgba(72, 255, 195, 0.1) 25px);
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 105, ../scss/_index.scss */
+/* line 129, ../scss/_index.scss */
 .collectEmail .collectEmail__container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 8em 0;
 }
-/* line 111, ../scss/_index.scss */
+/* line 135, ../scss/_index.scss */
 .collectEmail .collectEmail__container h4 {
   color: #fafafa;
   text-align: center;
 }
-/* line 116, ../scss/_index.scss */
+/* line 140, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field {
   display: flex;
 }
-/* line 119, ../scss/_index.scss */
+/* line 143, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email {
   flex: 1;
   color: #555555;
@@ -233,29 +303,35 @@ small, .font_small {
   font-size: 1.999em;
   padding-left: .5em;
 }
-/* line 126, ../scss/_index.scss */
+/* line 150, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email::-webkit-input-placeholder {
   color: #b4b4b4;
 }
-/* line 129, ../scss/_index.scss */
+/* line 153, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email:-ms-input-placeholder {
   color: #b4b4b4;
 }
-/* line 132, ../scss/_index.scss */
+/* line 156, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email::-moz-placeholder {
   color: #b4b4b4;
 }
-/* line 135, ../scss/_index.scss */
+/* line 159, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email:-moz-placeholder {
   color: #b4b4b4;
 }
-/* line 139, ../scss/_index.scss */
+/* line 163, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .submit {
   color: white;
   border: none;
   border-radius: 0 4px 4px 0;
   background-color: #17B3C1;
   padding: 0 .5em;
+}
+@media screen and (max-width: 600px) {
+  /* line 140, ../scss/_index.scss */
+  .collectEmail .collectEmail__container .email__field {
+    flex-direction: column;
+  }
 }
 
 /* line 1, ../scss/_bloglist.scss */
@@ -391,12 +467,12 @@ small, .font_small {
   padding: 10px;
 }
 
-/* line 10, ../scss/all.scss */
+/* line 11, ../scss/all.scss */
 html {
   font-size: 1em;
 }
 
-/* line 12, ../scss/all.scss */
+/* line 13, ../scss/all.scss */
 body {
   font-weight: 400;
   line-height: 1.45;

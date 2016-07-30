@@ -32,6 +32,10 @@ color: $white;
   .intro__tagline{
     text-align: center;
   }
+
+  @include small(){
+    margin-top: 3em;
+  }
 }
 
 
@@ -58,6 +62,26 @@ color: $white;
      margin-right: 5em;
    }
 
+
+  }
+
+  @include small(){
+    flex-direction: column;
+
+    .left{
+      padding: 3em 1em;
+    }
+
+    .right{
+      background-image: linear-gradient(to bottom, $blue, transparent 130%),url("../img/integrations.png");
+      background-position: auto;
+
+      h2{
+        margin: 0;
+        padding: 3em 1em;
+        text-align: center;
+      }
+    }
 
   }
 }
@@ -142,6 +166,10 @@ color: $white;
         border-radius: 0 4px 4px 0;
         background-color: $green;
         padding: 0 .5em;
+      }
+
+      @include small(){
+        flex-direction: column;
       }
     }
   }

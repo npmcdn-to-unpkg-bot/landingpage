@@ -1,0 +1,27 @@
+$x-small-break: 480px !default;
+$small-break: 600px !default;
+$medium-break: 800px !default;
+
+@mixin x-small() {
+  @media screen and (max-width: $x-small-break) {
+    @content;
+  }
+}
+
+@mixin small() {
+  @media screen and (max-width: $small-break) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @media screen and (max-width: $medium-break) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @media screen and (min-width: $small-break) {
+    @content;
+  }
+}

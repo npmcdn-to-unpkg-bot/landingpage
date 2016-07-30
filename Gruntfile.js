@@ -84,7 +84,7 @@ module.exports = function(grunt) {
                     base: 'app',
                     livereload: true,
                     open: true,
-                    hostname: 'localhost'
+                    hostname: '0.0.0.0'
                 }
             }
         },
