@@ -12,8 +12,9 @@
 }
 
 .intro{
-margin-top: 6em;
-padding: 3em 0 300px;
+margin-top: 5.5em;
+padding: 3em 2em 200px;
+
 background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(72,243,219,.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(72,435,195,.1) 25px),linear-gradient(to top, $purple, $blue);
 color: $white;
   .intro__logo{
@@ -31,59 +32,28 @@ color: $white;
   }
   .intro__tagline{
     text-align: center;
+ }
+
+  @include medium(){
+    margin-top: 4.5em;
+    padding-bottom: 200px;
+    .intro__tagline{
+      font-size: 1.999em;
+      padding: 1em 2em;
+    }
   }
 
   @include small(){
-    margin-top: 3em;
-  }
-}
+    margin-top: 2.5em;
+    padding-bottom: 100px;
 
-
-.sub-intro {
-  background-color: $blue;
-  color: $white;
-  display: flex;
-
-  .left{
-    flex: 1;
-    padding: 6em 4em;
-  }
-  .right{
-    flex: 1;
-    background-image: linear-gradient(to right, $blue, transparent 110%),url("../img/integrations.png");
-    background-size: cover;
-    background-position: 100px auto;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-   h2{
-     flex: 1;
-     margin-right: 5em;
-   }
-
-
-  }
-
-  @include small(){
-    flex-direction: column;
-
-    .left{
-      padding: 3em 1em;
+    .intro__tagline{
+      font-size: 1.999em;
+      padding: 1em;
     }
-
-    .right{
-      background-image: linear-gradient(to bottom, $blue, transparent 130%),url("../img/integrations.png");
-      background-position: auto;
-
-      h2{
-        margin: 0;
-        padding: 3em 1em;
-        text-align: center;
-      }
-    }
-
   }
+
+
 }
 
 .build, .bake, .test, .deploy{
@@ -114,7 +84,69 @@ color: $white;
   }
 }
 
+.marketing {
+  background-color: $blue;
+  color: $white;
+  display: flex;
 
+  .left{
+    flex: 1;
+    padding: 6em 4em;
+  }
+  .right{
+    flex: 1;
+    background-image: linear-gradient(to right, $blue, transparent 110%),url("../img/integrations.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    h2{
+      flex: 1;
+      margin-right: 5em;
+    }
+
+
+  }
+
+  @include medium(){
+    flex-direction: column;
+    .left{
+      padding: 3em 2em;
+    }
+
+    .right{
+      background-image: linear-gradient(to bottom, $blue, transparent 130%),url("../img/integrations.png");
+
+      h2{
+        margin: 0;
+        padding: 3em 1em;
+        text-align: center;
+      }
+    }
+  }
+
+  @include small(){
+    flex-direction: column;
+
+    .left{
+      padding: 3em 2em;
+    }
+
+    .right{
+      background-image: linear-gradient(to bottom, $blue, transparent 130%),url("../img/integrations.png");
+
+      h2{
+        margin: 0;
+        padding: 3em 1em;
+        text-align: center;
+      }
+    }
+
+  }
+
+
+}
 
 .collectEmail{
   width: 100%;
@@ -163,14 +195,77 @@ color: $white;
       .submit{
         color: $white;
         border: none;
-        border-radius: 0 4px 4px 0;
+//        border-radius: 0 4px 4px 0;
+        border-radius: 4px;
         background-color: $green;
-        padding: 0 .5em;
+//        padding: 0 .5em;
+        padding: 1em 3em;
+
+        //remove for full email field
+        margin: 1em auto;
+
+        button{
+          background-color: transparent;
+          color: $white;
+          border:none;
+        }
       }
 
-      @include small(){
-        flex-direction: column;
-      }
     }
   }
+  @include medium(){
+
+    .collectEmail__container{
+      .email__field{
+        flex-direction: column;
+
+        .email{
+          min-width: 75%;
+          margin: 0 auto;
+          font-size: 1.414em;
+        }
+
+        .submit{
+          margin: 1.5em auto 0;
+//          padding: .75em;
+          padding: 1em 3em;
+          border-radius: 4px;
+        }
+      }
+      h4{
+        padding: 0 1.5em;
+        margin-top: 1em;
+      }
+    }
+
+  }
+
+  @include small(){
+
+    .collectEmail__container{
+      .email__field{
+        flex-direction: column;
+
+        .email{
+          min-width: 75%;
+          margin: 0 auto;
+          font-size: 1.414em;
+        }
+
+        .submit{
+          margin: 1.5em auto 0;
+//          padding: .75em;
+          padding: 1em 3em;
+          border-radius: 4px;
+        }
+      }
+      h4{
+        padding: 0 1.5em;
+        margin-top: 1em;
+      }
+    }
+
+  }
+
+
 }

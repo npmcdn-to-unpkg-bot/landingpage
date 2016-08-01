@@ -68,14 +68,21 @@ small, .font_small {
 }
 /* line 19, ../scss/_header.scss */
 .header .header__container .logo {
-  height: 72px;
-  flex: 1;
+  height: 64px;
+  margin-left: 2em;
 }
 /* line 23, ../scss/_header.scss */
 .header .header__container .logo img {
   height: 100%;
   display: inline-block;
   margin: auto;
+}
+@media screen and (max-width: 900px) {
+  /* line 19, ../scss/_header.scss */
+  .header .header__container .logo {
+    height: 45px;
+    margin-left: 1.5em;
+  }
 }
 @media screen and (max-width: 600px) {
   /* line 19, ../scss/_header.scss */
@@ -84,46 +91,112 @@ small, .font_small {
     margin-left: 1.5em;
   }
 }
-/* line 35, ../scss/_header.scss */
+/* line 40, ../scss/_header.scss */
 .header .header__container .links {
   flex: 1;
   float: right;
-  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
 }
-/* line 40, ../scss/_header.scss */
+/* line 46, ../scss/_header.scss */
 .header .header__container .links .links__list {
+  display: inline-block;
   list-style: none;
+  margin: 0;
 }
-/* line 43, ../scss/_header.scss */
+/* line 51, ../scss/_header.scss */
+.header .header__container .links .links__list a {
+  text-decoration: none;
+  color: #222222;
+}
+/* line 56, ../scss/_header.scss */
 .header .header__container .links .links__list .links__list__item {
   display: inline-block;
-  margin-left: 3em;
+  margin: 0 1.5em;
+  cursor: pointer;
+  padding: .5em .5em;
 }
-@media screen and (max-width: 600px) {
-  /* line 35, ../scss/_header.scss */
+/* line 62, ../scss/_header.scss */
+.header .header__container .links .links__list .links__list__item.selected {
+  border-bottom: 5px solid #4A3764;
+}
+/* line 66, ../scss/_header.scss */
+.header .header__container .links .links__list .links__list__item.contact {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: #17B3C1;
+  padding: .25em .75em;
+}
+@media screen and (max-width: 900px) {
+  /* line 40, ../scss/_header.scss */
   .header .header__container .links {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+/* line 86, ../scss/_header.scss */
+.header .header__container .menu {
+  height: 35px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 92, ../scss/_header.scss */
+.header .header__container .menu img {
+  height: 100%;
+}
+@media screen and (min-width: 600px) {
+  /* line 86, ../scss/_header.scss */
+  .header .header__container .menu {
     display: none;
   }
 }
-/* line 54, ../scss/_header.scss */
-.header .header__container .menu {
-  height: 35px;
-}
-/* line 56, ../scss/_header.scss */
-.header .header__container .menu img {
-  height: 100%;
-  display: inline-block;
-  margin: auto;
-}
 @media screen and (max-width: 600px) {
-  /* line 54, ../scss/_header.scss */
+  /* line 86, ../scss/_header.scss */
   .header .header__container .menu {
     margin-right: 1.5em;
   }
 }
+/* line 107, ../scss/_header.scss */
+.header .menu__links {
+  display: none;
+  background-color: white;
+}
+/* line 109, ../scss/_header.scss */
+.header .menu__links.open {
+  display: block;
+}
+/* line 115, ../scss/_header.scss */
+.header .menu__links .links__list {
+  display: block;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+/* line 121, ../scss/_header.scss */
+.header .menu__links .links__list a {
+  text-decoration: none;
+  text-align: right;
+  color: #222222;
+  border-width: 1px;
+  border-style: solid none solid none;
+  border-color: #d3d3d3;
+}
+/* line 130, ../scss/_header.scss */
+.header .menu__links .links__list .links__list__item {
+  display: block;
+  cursor: pointer;
+  padding: .5em 1.5em;
+}
+/* line 136, ../scss/_header.scss */
+.header .menu__links .links__list .links__list__item.selected {
+  background-color: #4A3764;
+  color: white;
+}
 @media screen and (min-width: 600px) {
-  /* line 54, ../scss/_header.scss */
-  .header .header__container .menu {
+  /* line 107, ../scss/_header.scss */
+  .header .menu__links {
     display: none;
   }
 }
@@ -136,8 +209,8 @@ small, .font_small {
 
 /* line 1, ../scss/_footer.scss */
 .footer {
-  background-color: rgba(225, 225, 225, 0.4);
-  color: #AAA;
+  background-color: #222222;
+  color: #FFF;
   padding: 1em 2em 250px;
 }
 /* line 6, ../scss/_footer.scss */
@@ -163,114 +236,150 @@ small, .font_small {
 
 /* line 14, ../scss/_index.scss */
 .intro {
-  margin-top: 6em;
-  padding: 3em 0 300px;
+  margin-top: 5.5em;
+  padding: 3em 2em 200px;
   background-image: linear-gradient(to bottom, transparent 80%, #4A3764), repeating-linear-gradient(29deg, transparent, transparent 23px, transparent 23px, rgba(72, 243, 219, 0.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px, transparent 23px, rgba(72, 255, 195, 0.1) 25px), linear-gradient(to top, #4A3764, #6150C1);
   color: white;
 }
-/* line 19, ../scss/_index.scss */
+/* line 20, ../scss/_index.scss */
 .intro .intro__logo {
   width: 100%;
   padding: 4em 0 0;
 }
-/* line 23, ../scss/_index.scss */
+/* line 24, ../scss/_index.scss */
 .intro .intro__logo img {
   display: block;
   max-width: 175px;
   margin: 0 auto;
 }
-/* line 29, ../scss/_index.scss */
+/* line 30, ../scss/_index.scss */
 .intro .intro__title {
   text-align: center;
 }
-/* line 32, ../scss/_index.scss */
+/* line 33, ../scss/_index.scss */
 .intro .intro__tagline {
   text-align: center;
+}
+@media screen and (max-width: 900px) {
+  /* line 14, ../scss/_index.scss */
+  .intro {
+    margin-top: 4.5em;
+    padding-bottom: 200px;
+  }
+  /* line 40, ../scss/_index.scss */
+  .intro .intro__tagline {
+    font-size: 1.999em;
+    padding: 1em 2em;
+  }
 }
 @media screen and (max-width: 600px) {
   /* line 14, ../scss/_index.scss */
   .intro {
-    margin-top: 3em;
+    margin-top: 2.5em;
+    padding-bottom: 100px;
+  }
+  /* line 50, ../scss/_index.scss */
+  .intro .intro__tagline {
+    font-size: 1.999em;
+    padding: 1em;
   }
 }
 
-/* line 42, ../scss/_index.scss */
-.sub-intro {
+/* line 59, ../scss/_index.scss */
+.build, .bake, .test, .deploy {
+  padding: 200px 0 0;
+}
+/* line 62, ../scss/_index.scss */
+.build .inner-section, .bake .inner-section, .test .inner-section, .deploy .inner-section {
+  display: flex;
+}
+/* line 65, ../scss/_index.scss */
+.build .inner-section .section__text, .bake .inner-section .section__text, .test .inner-section .section__text, .deploy .inner-section .section__text {
+  display: block;
+  flex: 5;
+}
+/* line 70, ../scss/_index.scss */
+.build .inner-section .section__image, .bake .inner-section .section__image, .test .inner-section .section__image, .deploy .inner-section .section__image {
+  flex: 5;
+}
+/* line 73, ../scss/_index.scss */
+.build .inner-section .section__image img, .bake .inner-section .section__image img, .test .inner-section .section__image img, .deploy .inner-section .section__image img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 82, ../scss/_index.scss */
+.bake .inner-section, .deploy .inner-section {
+  flex-direction: row-reverse;
+}
+
+/* line 87, ../scss/_index.scss */
+.marketing {
   background-color: #6150C1;
   color: white;
   display: flex;
 }
-/* line 47, ../scss/_index.scss */
-.sub-intro .left {
+/* line 92, ../scss/_index.scss */
+.marketing .left {
   flex: 1;
   padding: 6em 4em;
 }
-/* line 51, ../scss/_index.scss */
-.sub-intro .right {
+/* line 96, ../scss/_index.scss */
+.marketing .right {
   flex: 1;
   background-image: linear-gradient(to right, #6150C1, transparent 110%), url("../img/integrations.png");
   background-size: cover;
-  background-position: 100px auto;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
 }
-/* line 60, ../scss/_index.scss */
-.sub-intro .right h2 {
+/* line 104, ../scss/_index.scss */
+.marketing .right h2 {
   flex: 1;
   margin-right: 5em;
 }
-@media screen and (max-width: 600px) {
-  /* line 42, ../scss/_index.scss */
-  .sub-intro {
+@media screen and (max-width: 900px) {
+  /* line 87, ../scss/_index.scss */
+  .marketing {
     flex-direction: column;
   }
-  /* line 71, ../scss/_index.scss */
-  .sub-intro .left {
-    padding: 3em 1em;
+  /* line 114, ../scss/_index.scss */
+  .marketing .left {
+    padding: 3em 2em;
   }
-  /* line 75, ../scss/_index.scss */
-  .sub-intro .right {
+  /* line 118, ../scss/_index.scss */
+  .marketing .right {
     background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations.png");
-    background-position: auto;
   }
-  /* line 79, ../scss/_index.scss */
-  .sub-intro .right h2 {
+  /* line 121, ../scss/_index.scss */
+  .marketing .right h2 {
+    margin: 0;
+    padding: 3em 1em;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 87, ../scss/_index.scss */
+  .marketing {
+    flex-direction: column;
+  }
+  /* line 132, ../scss/_index.scss */
+  .marketing .left {
+    padding: 3em 2em;
+  }
+  /* line 136, ../scss/_index.scss */
+  .marketing .right {
+    background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations.png");
+  }
+  /* line 139, ../scss/_index.scss */
+  .marketing .right h2 {
     margin: 0;
     padding: 3em 1em;
     text-align: center;
   }
 }
 
-/* line 89, ../scss/_index.scss */
-.build, .bake, .test, .deploy {
-  padding: 200px 0 0;
-}
-/* line 92, ../scss/_index.scss */
-.build .inner-section, .bake .inner-section, .test .inner-section, .deploy .inner-section {
-  display: flex;
-}
-/* line 95, ../scss/_index.scss */
-.build .inner-section .section__text, .bake .inner-section .section__text, .test .inner-section .section__text, .deploy .inner-section .section__text {
-  display: block;
-  flex: 5;
-}
-/* line 100, ../scss/_index.scss */
-.build .inner-section .section__image, .bake .inner-section .section__image, .test .inner-section .section__image, .deploy .inner-section .section__image {
-  flex: 5;
-}
-/* line 103, ../scss/_index.scss */
-.build .inner-section .section__image img, .bake .inner-section .section__image img, .test .inner-section .section__image img, .deploy .inner-section .section__image img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* line 112, ../scss/_index.scss */
-.bake .inner-section, .deploy .inner-section {
-  flex-direction: row-reverse;
-}
-
-/* line 119, ../scss/_index.scss */
+/* line 151, ../scss/_index.scss */
 .collectEmail {
   width: 100%;
   padding: 2em 0;
@@ -279,23 +388,23 @@ small, .font_small {
   background-image: linear-gradient(to bottom, transparent 80%, #4A3764), repeating-linear-gradient(29deg, transparent, transparent 23px, transparent 23px, rgba(72, 243, 219, 0.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px, transparent 23px, rgba(72, 255, 195, 0.1) 25px);
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 129, ../scss/_index.scss */
+/* line 161, ../scss/_index.scss */
 .collectEmail .collectEmail__container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 8em 0;
 }
-/* line 135, ../scss/_index.scss */
+/* line 167, ../scss/_index.scss */
 .collectEmail .collectEmail__container h4 {
   color: #fafafa;
   text-align: center;
 }
-/* line 140, ../scss/_index.scss */
+/* line 172, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field {
   display: flex;
 }
-/* line 143, ../scss/_index.scss */
+/* line 175, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email {
   flex: 1;
   color: #555555;
@@ -303,34 +412,81 @@ small, .font_small {
   font-size: 1.999em;
   padding-left: .5em;
 }
-/* line 150, ../scss/_index.scss */
+/* line 182, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email::-webkit-input-placeholder {
   color: #b4b4b4;
 }
-/* line 153, ../scss/_index.scss */
+/* line 185, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email:-ms-input-placeholder {
   color: #b4b4b4;
 }
-/* line 156, ../scss/_index.scss */
+/* line 188, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email::-moz-placeholder {
   color: #b4b4b4;
 }
-/* line 159, ../scss/_index.scss */
+/* line 191, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email:-moz-placeholder {
   color: #b4b4b4;
 }
-/* line 163, ../scss/_index.scss */
+/* line 195, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .submit {
   color: white;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   background-color: #17B3C1;
-  padding: 0 .5em;
+  padding: 1em 3em;
+  margin: 1em auto;
 }
-@media screen and (max-width: 600px) {
-  /* line 140, ../scss/_index.scss */
+/* line 207, ../scss/_index.scss */
+.collectEmail .collectEmail__container .email__field .submit button {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+@media screen and (max-width: 900px) {
+  /* line 219, ../scss/_index.scss */
   .collectEmail .collectEmail__container .email__field {
     flex-direction: column;
+  }
+  /* line 222, ../scss/_index.scss */
+  .collectEmail .collectEmail__container .email__field .email {
+    min-width: 75%;
+    margin: 0 auto;
+    font-size: 1.414em;
+  }
+  /* line 228, ../scss/_index.scss */
+  .collectEmail .collectEmail__container .email__field .submit {
+    margin: 1.5em auto 0;
+    padding: 1em 3em;
+    border-radius: 4px;
+  }
+  /* line 235, ../scss/_index.scss */
+  .collectEmail .collectEmail__container h4 {
+    padding: 0 1.5em;
+    margin-top: 1em;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 246, ../scss/_index.scss */
+  .collectEmail .collectEmail__container .email__field {
+    flex-direction: column;
+  }
+  /* line 249, ../scss/_index.scss */
+  .collectEmail .collectEmail__container .email__field .email {
+    min-width: 75%;
+    margin: 0 auto;
+    font-size: 1.414em;
+  }
+  /* line 255, ../scss/_index.scss */
+  .collectEmail .collectEmail__container .email__field .submit {
+    margin: 1.5em auto 0;
+    padding: 1em 3em;
+    border-radius: 4px;
+  }
+  /* line 262, ../scss/_index.scss */
+  .collectEmail .collectEmail__container h4 {
+    padding: 0 1.5em;
+    margin-top: 1em;
   }
 }
 
@@ -470,9 +626,15 @@ small, .font_small {
 /* line 11, ../scss/all.scss */
 html {
   font-size: 1em;
+  box-sizing: border-box;
 }
 
-/* line 13, ../scss/all.scss */
+/* line 16, ../scss/all.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 20, ../scss/all.scss */
 body {
   font-weight: 400;
   line-height: 1.45;

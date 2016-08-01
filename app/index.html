@@ -9,18 +9,31 @@
 <div class="header">
     <div class="header__container">
         <div class="logo">
-            <img src="img/black.png" alt="Qubeship Logo">
+            <a href="index.html"><img src="img/black.png" alt="Qubeship Logo"></a>
         </div>
+
         <div class="links">
             <ul class="links__list">
-                <li class="links__list__item">Process</li>
-                <li class="links__list__item"><a href="blogs.html">Blog</a></li>
-                <li class="links__list__item">Contact</li>
+                <!--<a href="index.html"><li class="links__list__item selected">Process</li></a>-->
+                <!--<a href="blogs.html"><li class="links__list__item ">Blog</li></a>-->
+                <a href="mailto:Heather.McLane@contractor.ca.com?subject=Tell%20me%20more%20about%20QubeShip!&body=Hello Qubeship Team,%0A%0A Please send me more information about your new, lightweight, seamless container deployment experience.%0A%0A Regards,">
+                <li class="links__list__item contact">Sign Me Up</li></a>
             </ul>
         </div>
-        <div class="menu">
-            <img src="img/menu.svg" alt="Menu">
-        </div>
+
+        <!--<div class="menu" id="menu">-->
+            <!--<img src="img/menu.svg" alt="Menu">-->
+        <!--</div>-->
+    </div>
+
+
+    <div class="menu__links closed" id="menu__links">
+        <ul class="links__list">
+            <a href="index.html"><li class="links__list__item selected">Process</li></a>
+            <!--<a href="blogs.html"><li class="links__list__item ">Blog</li></a>-->
+            <a href="mailto:Heather.McLane@contractor.ca.com?subject=Tell%20me%20more%20about%20QubeShip!&body=Hello Qubeship Team,%0A%0A Please send me more information about your new, lightweight, seamless container deployment experience.%0A%0A Regards,">
+                <li class="links__list__item contact">Sign Me Up</li></a>
+        </ul>
     </div>
 </div>
 
@@ -48,22 +61,22 @@
         </center>
     </div>
 
-    <div class="sub-intro landing-section">
+    <div class="marketing landing-section">
             <div class="left">
                 <ul class="marketing__list">
                     <li>
                         <h4>Scalable</h4>
-                        <p>Scales to fit your workflow, whether you are an individual or a large corporation</p>
+                        <p>Scales to fit any workflow</p>
                     </li>
                     <li>
                         <h4>Secure</h4>
-                        <p>Keeps your environments synced and secure to ensure a  </p>
+                        <p>Your code assets are stored and transported in a secure, self-updating environment that is always at the cutting edge of security technology</p>
                     </li>
                     <li>
                         <h4>Simple</h4>
                         <p>Upload your code, pick your destination and you're ready to go.
                             <br>
-                        Get deployments status updates, configure you favorite integrations, view detailed logs, and even build your own API's
+                        Get deployment status updates, configure your favorite integrations, view detailed logs, and even build your own APIs
                         </p>
                     </li>
                 </ul>
@@ -77,11 +90,15 @@
 
 <div class="collectEmail">
     <div class="collectEmail__container">
-        <div class="email__field">
-            <input class="email" placeholder="Email Address"/>
-            <input type="Submit" class="submit" value="Keep me updated" />
-        </div>
         <h4>Interested in learning more? Sign up here. You can always change your mind later.</h4>
+
+        <div class="email__field">
+            <!--<input class="email" placeholder="Email"/>-->
+            <!--<input type="Submit" class="submit" value="Keep me updated" />-->
+            <a  class="submit" href="mailto:Heather.McLane@contractor.ca.com?subject=Tell%20me%20more%20about%20QubeShip!&body=Hello Qubeship Team,%0A%0A Please send me more information about your new, lightweight, seamless container deployment experience.%0A%0A Regards,"><button class="mail-to ">Sign Me Up</button></a>
+        </div>
+
+
     </div>
 </div>
 
@@ -89,7 +106,26 @@
     <h4>Qubeship</h4>
 </div>
 
+</div>
 
 
 </body>
+<!--<script>-->
+    <!--(function() {-->
+       <!--var menu = document.getElementById("menu");-->
+        <!--var menu__links = document.getElementById("menu__links");-->
+
+        <!--menu.addEventListener('click', function(){-->
+            <!--if(menu__links.classList.contains('open')){-->
+                <!--menu.classList.remove('open');-->
+                <!--menu__links.classList.remove('open');-->
+            <!--}-->
+            <!--else{-->
+                <!--menu__links.classList.add('open');-->
+                <!--menu.classList.add('open');-->
+            <!--}-->
+        <!--});-->
+
+    <!--})();-->
+<!--</script>-->
 </html>

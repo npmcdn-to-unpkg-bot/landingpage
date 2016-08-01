@@ -1,6 +1,6 @@
 $x-small-break: 480px !default;
 $small-break: 600px !default;
-$medium-break: 800px !default;
+$medium-break: 900px !default;
 
 @mixin x-small() {
   @media screen and (max-width: $x-small-break) {
@@ -15,7 +15,7 @@ $medium-break: 800px !default;
 }
 
 @mixin medium() {
-  @media screen and (max-width: $medium-break) {
+  @media screen and (max-width: $medium-break){
     @content;
   }
 }
