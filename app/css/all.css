@@ -320,11 +320,15 @@ small, .font_small {
   display: flex;
 }
 /* line 92, ../scss/_index.scss */
+.marketing .marketing__list {
+  list-style: none;
+}
+/* line 96, ../scss/_index.scss */
 .marketing .left {
   flex: 1;
   padding: 6em 4em;
 }
-/* line 96, ../scss/_index.scss */
+/* line 100, ../scss/_index.scss */
 .marketing .right {
   flex: 1;
   background-image: linear-gradient(to right, #6150C1, transparent 110%), url("../img/integrations.png");
@@ -333,7 +337,7 @@ small, .font_small {
   display: flex;
   align-items: center;
 }
-/* line 104, ../scss/_index.scss */
+/* line 108, ../scss/_index.scss */
 .marketing .right h2 {
   flex: 1;
   margin-right: 5em;
@@ -343,15 +347,15 @@ small, .font_small {
   .marketing {
     flex-direction: column;
   }
-  /* line 114, ../scss/_index.scss */
+  /* line 118, ../scss/_index.scss */
   .marketing .left {
     padding: 3em 2em;
   }
-  /* line 118, ../scss/_index.scss */
+  /* line 122, ../scss/_index.scss */
   .marketing .right {
     background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations.png");
   }
-  /* line 121, ../scss/_index.scss */
+  /* line 125, ../scss/_index.scss */
   .marketing .right h2 {
     margin: 0;
     padding: 3em 1em;
@@ -363,15 +367,15 @@ small, .font_small {
   .marketing {
     flex-direction: column;
   }
-  /* line 132, ../scss/_index.scss */
+  /* line 136, ../scss/_index.scss */
   .marketing .left {
     padding: 3em 2em;
   }
-  /* line 136, ../scss/_index.scss */
+  /* line 140, ../scss/_index.scss */
   .marketing .right {
     background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations.png");
   }
-  /* line 139, ../scss/_index.scss */
+  /* line 143, ../scss/_index.scss */
   .marketing .right h2 {
     margin: 0;
     padding: 3em 1em;
@@ -379,7 +383,7 @@ small, .font_small {
   }
 }
 
-/* line 151, ../scss/_index.scss */
+/* line 155, ../scss/_index.scss */
 .collectEmail {
   width: 100%;
   padding: 2em 0;
@@ -388,23 +392,23 @@ small, .font_small {
   background-image: linear-gradient(to bottom, transparent 80%, #4A3764), repeating-linear-gradient(29deg, transparent, transparent 23px, transparent 23px, rgba(72, 243, 219, 0.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px, transparent 23px, rgba(72, 255, 195, 0.1) 25px);
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 161, ../scss/_index.scss */
+/* line 165, ../scss/_index.scss */
 .collectEmail .collectEmail__container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 8em 0;
 }
-/* line 167, ../scss/_index.scss */
+/* line 171, ../scss/_index.scss */
 .collectEmail .collectEmail__container h4 {
   color: #fafafa;
   text-align: center;
 }
-/* line 172, ../scss/_index.scss */
+/* line 176, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field {
   display: flex;
 }
-/* line 175, ../scss/_index.scss */
+/* line 179, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email {
   flex: 1;
   color: #555555;
@@ -412,23 +416,23 @@ small, .font_small {
   font-size: 1.999em;
   padding-left: .5em;
 }
-/* line 182, ../scss/_index.scss */
+/* line 186, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email::-webkit-input-placeholder {
   color: #b4b4b4;
 }
-/* line 185, ../scss/_index.scss */
+/* line 189, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email:-ms-input-placeholder {
   color: #b4b4b4;
 }
-/* line 188, ../scss/_index.scss */
+/* line 192, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email::-moz-placeholder {
   color: #b4b4b4;
 }
-/* line 191, ../scss/_index.scss */
+/* line 195, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .email:-moz-placeholder {
   color: #b4b4b4;
 }
-/* line 195, ../scss/_index.scss */
+/* line 199, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .submit {
   color: white;
   border: none;
@@ -437,53 +441,53 @@ small, .font_small {
   padding: 1em 3em;
   margin: 1em auto;
 }
-/* line 207, ../scss/_index.scss */
+/* line 211, ../scss/_index.scss */
 .collectEmail .collectEmail__container .email__field .submit button {
   background-color: transparent;
   color: white;
   border: none;
 }
 @media screen and (max-width: 900px) {
-  /* line 219, ../scss/_index.scss */
+  /* line 223, ../scss/_index.scss */
   .collectEmail .collectEmail__container .email__field {
     flex-direction: column;
   }
-  /* line 222, ../scss/_index.scss */
+  /* line 226, ../scss/_index.scss */
   .collectEmail .collectEmail__container .email__field .email {
     min-width: 75%;
     margin: 0 auto;
     font-size: 1.414em;
   }
-  /* line 228, ../scss/_index.scss */
+  /* line 232, ../scss/_index.scss */
   .collectEmail .collectEmail__container .email__field .submit {
     margin: 1.5em auto 0;
     padding: 1em 3em;
     border-radius: 4px;
   }
-  /* line 235, ../scss/_index.scss */
+  /* line 239, ../scss/_index.scss */
   .collectEmail .collectEmail__container h4 {
     padding: 0 1.5em;
     margin-top: 1em;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 246, ../scss/_index.scss */
+  /* line 250, ../scss/_index.scss */
   .collectEmail .collectEmail__container .email__field {
     flex-direction: column;
   }
-  /* line 249, ../scss/_index.scss */
+  /* line 253, ../scss/_index.scss */
   .collectEmail .collectEmail__container .email__field .email {
     min-width: 75%;
     margin: 0 auto;
     font-size: 1.414em;
   }
-  /* line 255, ../scss/_index.scss */
+  /* line 259, ../scss/_index.scss */
   .collectEmail .collectEmail__container .email__field .submit {
     margin: 1.5em auto 0;
     padding: 1em 3em;
     border-radius: 4px;
   }
-  /* line 262, ../scss/_index.scss */
+  /* line 266, ../scss/_index.scss */
   .collectEmail .collectEmail__container h4 {
     padding: 0 1.5em;
     margin-top: 1em;

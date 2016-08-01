@@ -88,6 +88,10 @@ color: $white;
   background-color: $blue;
   color: $white;
   display: flex;
+  
+  .marketing__list{
+    list-style: none;
+  }
 
   .left{
     flex: 1;
