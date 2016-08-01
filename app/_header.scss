@@ -1,0 +1,160 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 9001;
+  opacity: .98;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1);
+
+  .header__container{
+    width: 100%;
+    max-width: 1280px;
+    padding: 1em 0 .8em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    .logo{
+      height: 64px;
+      margin-left: 2em;
+
+      img{
+        height: 100%;
+        display: inline-block;
+        margin: auto;
+      }
+
+      @include medium(){
+        height: 45px;
+        margin-left: 1.5em;
+      }
+      @include small(){
+        height: 35px;
+        margin-left: 1.5em;
+      }
+
+    }
+
+    .title{
+      h4{
+        margin: 0 0 0 .75em;
+      }
+    }
+
+    .links{
+      flex: 1;
+      float: right;
+      display: flex;
+      justify-content: flex-end;
+
+      .links__list{
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+
+        a{
+          text-decoration: none;
+          color: $black;
+        }
+
+        .links__list__item{
+          display: inline-block;
+          margin: 0 1.5em;
+          cursor: pointer;
+          padding: .5em .5em;
+
+          &.selected{
+            border-bottom: 5px solid $purple;
+          }
+
+          &.contact{
+            color: $white;
+            border: none;
+            //        border-radius: 0 4px 4px 0;
+            border-radius: 4px;
+            background-color: $green;
+            //        padding: 0 .5em;
+            padding: .25em .75em;
+          }
+        }
+      }
+
+      @include medium(){
+        display: flex;
+        justify-content: flex-end;
+      }
+
+
+    }
+
+    .menu{
+      height: 35px;
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+
+      img{
+        height: 100%;
+      }
+
+      @include large(){
+        display: none;
+      }
+      @include small(){
+        margin-right: 1.5em;
+      }
+
+    }
+
+  }
+
+  .menu__links{
+
+    &.open{
+      display: block;
+    }
+    display: none;
+    background-color: $white;
+
+    .links__list{
+      display: block;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      a{
+        text-decoration: none;
+        text-align: right;
+        color: $black;
+        border-width: 1px;
+        border-style: solid none solid none;
+        border-color: #d3d3d3;
+      }
+
+      .links__list__item{
+        display: block;
+        cursor: pointer;
+        padding: .5em 1.5em;
+
+
+        &.selected{
+          background-color: $purple;
+          color: $white;
+        }
+      }
+    }
+
+    @include large(){
+      display: none;
+    }
+    @include small(){
+
+    }
+  }
+
+  @include small(){
+    padding: 0;
+  }
+}
