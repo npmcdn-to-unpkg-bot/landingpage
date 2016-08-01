@@ -12,8 +12,8 @@
 }
 
 .intro{
-margin-top: 5.5em;
-padding: 3em 2em 200px;
+margin-top: 6.5em;
+padding: 6em 2em 200px;
 
 background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(72,243,219,.1) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(72,435,195,.1) 25px),linear-gradient(to top, $purple, $blue);
 color: $white;
@@ -203,7 +203,7 @@ color: $white;
         border-radius: 4px;
         background-color: $green;
 //        padding: 0 .5em;
-        padding: 1em 3em;
+        padding: .5em 3em;
 
         //remove for full email field
         margin: 1em auto;
