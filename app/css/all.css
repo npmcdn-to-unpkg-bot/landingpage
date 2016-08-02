@@ -219,7 +219,7 @@ small, .font_small {
     padding: 6em 4em; }
   .marketing .right {
     flex: 1;
-    background-image: linear-gradient(to right, #6150C1, transparent 110%), url("../img/integrations.png");
+    background-image: linear-gradient(to right, #6150C1, transparent 110%), url("../img/integrations2.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -233,7 +233,7 @@ small, .font_small {
       .marketing .left {
         padding: 3em 2em; }
       .marketing .right {
-        background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations.png"); }
+        background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations2.png"); }
         .marketing .right h2 {
           margin: 0;
           padding: 3em 1em;
@@ -244,7 +244,7 @@ small, .font_small {
       .marketing .left {
         padding: 3em 2em; }
       .marketing .right {
-        background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations.png"); }
+        background-image: linear-gradient(to bottom, #6150C1, transparent 130%), url("../img/integrations2.png"); }
         .marketing .right h2 {
           margin: 0;
           padding: 3em 1em;
