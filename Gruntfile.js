@@ -64,7 +64,7 @@ module.exports = function(grunt) {
                expand: true
             },
             css: {
-               src: 'app/css/main.css',
+               src: 'app/css/normalize.min.css',
                dest: 'production/css/',
                flatten: true,
                expand: true
@@ -74,6 +74,12 @@ module.exports = function(grunt) {
                 src: '*',
                 dest: 'production/img/',
                 expand: true
+            },
+            fonts: {
+                src: 'app/fonts/*',
+               dest: 'production/fonts',
+               flatten: true,
+               expand: true
             }
         },
 
