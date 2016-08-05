@@ -106,6 +106,22 @@ module.exports = function(grunt) {
                 files: ['app/css/*', 'app/js/*', 'app/**/*.html']
             }
         },
+        war: {
+            target: {
+                options: {
+                    war_dist_folder: 'target',
+                    war_name: 'ROOT'
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'production',
+                        src: ['**'],
+                        dest: ''
+                    }
+                ]
+            }
+        },
         clean: {
             dist: ['production/**/*']
         }
@@ -114,6 +130,7 @@ module.exports = function(grunt) {
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-war');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -123,5 +140,5 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('dev', ['jshint', 'compass:dev', 'connect', 'watch']);
-    grunt.registerTask('prod', ['clean', 'jshint', 'compass:prod', 'uglify:prod', 'copy']);
+    grunt.registerTask('prod', ['clean', 'jshint', 'compass:prod', 'uglify:prod', 'copy', 'war']);
 };
