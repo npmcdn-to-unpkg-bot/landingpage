@@ -1,4 +1,5 @@
 {
 	"cloud_project": "qubeship",
-	"ns": "production"
+	"ns": "production",
+	"keys_loc": "conf/"
 }
