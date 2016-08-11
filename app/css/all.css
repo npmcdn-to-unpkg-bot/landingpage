@@ -61,8 +61,24 @@ small, .font_small {
         .header .header__container .logo {
           height: 35px;
           margin-left: 1.5em; } }
-    .header .header__container .title h4 {
-      margin: 0 0 0 .75em; }
+    .header .header__container .title {
+      /* h4{
+        margin: 0 0 0 .75em;
+      } */
+      height: 20px;
+      margin-left: 2em; }
+      .header .header__container .title img {
+        height: 100%;
+        display: inline-block;
+        margin: auto; }
+      @media screen and (max-width: 900px) {
+        .header .header__container .title {
+          height: 15px;
+          margin-left: 1.5em; } }
+      @media screen and (max-width: 600px) {
+        .header .header__container .title {
+          height: 10px;
+          margin-left: 1.5em; } }
     .header .header__container .links {
       flex: 1;
       float: right;
@@ -74,7 +90,7 @@ small, .font_small {
         margin: 0; }
         .header .header__container .links .links__list a {
           text-decoration: none;
-          color: #222222; }
+          color: #111111; }
         .header .header__container .links .links__list .links__list__item {
           display: inline-block;
           margin: 0 1.5em;
@@ -85,9 +101,9 @@ small, .font_small {
           .header .header__container .links .links__list .links__list__item.contact {
             color: white;
             border: none;
-            border-radius: 4px;
-            background-color: #17B3C1;
-            padding: .25em .75em; }
+            border-radius: 8px;
+            background-color: #E24AA3;
+            padding: .8em 3.5em; }
       @media screen and (max-width: 900px) {
         .header .header__container .links {
           display: flex;
@@ -118,7 +134,7 @@ small, .font_small {
       .header .menu__links .links__list a {
         text-decoration: none;
         text-align: right;
-        color: #222222;
+        color: #111111;
         border-width: 1px;
         border-style: solid none solid none;
         border-color: #d3d3d3; }
@@ -153,7 +169,7 @@ small, .font_small {
 
 .mainContainer {
   /* background-image: linear-gradient(to bottom, white, transparent 240px, transparent), repeating-linear-gradient(29deg, transparent, transparent 23px , transparent 23px, rgba(225,225,225,.6) 25px), repeating-linear-gradient(-29deg, transparent, transparent 23px , transparent 23px, rgba(225,225,225,.6) 25px); */
-  background-color: #222222; }
+  background-color: #111111; }
 
 .landing-section {
   z-index: 1; }
@@ -171,18 +187,36 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
   background-image: url("../img/week3_background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  color: white; }
+  color: #3C1C74; }
   .intro .intro__logo {
     width: 100%;
-    padding: 4em 0 0; }
+    padding: 2em 2em; }
     .intro .intro__logo img {
       display: block;
       max-width: 175px;
       margin: 0 auto; }
-  .intro .intro__title {
-    text-align: center; }
   .intro .intro__tagline {
-    text-align: center; }
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: .5em 0 1.5em 0;
+    max-width: 1020px;
+    margin: auto; }
+    .intro .intro__tagline .intro__tagline__blurb {
+      padding: 0 0 20px 0;
+      max-width: 1020px;
+      margin: auto; }
+    .intro .intro__tagline .intro__tagline__signup a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.5em;
+      color: #3C1C74;
+      border: none;
+      border-radius: 8px;
+      background-color: #e8e8e8;
+      border: 2px solid #E24AA3;
+      padding: .8em 2em;
+      cursor: pointer;
+      margin: 2em 0; }
   @media screen and (max-width: 900px) {
     .intro {
       margin-top: 4.5em;
@@ -199,9 +233,9 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
         padding: 1em; } }
 
 .sub-tagline {
-  background-image: linear-gradient(to left, #240754, #222222);
+  background-image: linear-gradient(to left, #240754, #111111);
   color: white;
-  padding: 150px 0; }
+  padding: 6em 0 8em 0; }
 
 .marketing {
   color: white;
@@ -209,10 +243,10 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
   /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: right;
-  padding: 4em 0; }
+  padding: 4em 2em; }
   .marketing .centerblock {
     margin: auto;
-    max-width: 1000px;
+    max-width: 1400px;
     font-size: 1.5em;
     text-align: center; }
 
@@ -221,7 +255,7 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
   margin-bottom: 4em; }
 
 .details_block {
-  background-color: #222222;
+  background-color: #111111;
   color: white;
   display: flex;
   justify-content: center;
@@ -244,14 +278,14 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
       .details_block .details_image {
         padding: 3em 2em; }
       .details_block .details_text {
-        padding: 3em 1em; } }
+        padding: 1em; } }
   @media screen and (max-width: 600px) {
     .details_block {
       flex-direction: column; }
       .details_block .details_image {
-        padding: 3em 2em; }
+        display: none; }
       .details_block .details_text {
-        padding: 3em 1em; } }
+        padding: .5em; } }
 
 .collectEmail {
   width: 100%;
@@ -264,16 +298,15 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 1em 0 4em 0; }
+    padding: 1em 0 4em 0;
+    text-align: center; }
     .collectEmail .collectEmail__container h4 {
       color: #fafafa;
       text-align: center; }
     .collectEmail .collectEmail__container .email__field {
-      display: flex; }
+      margin: 2em auto; }
       .collectEmail .collectEmail__container .email__field .email {
-        flex: 1;
         color: #555555;
-        margin-right: auto;
         font-size: 1.999em;
         padding-left: .5em; }
         .collectEmail .collectEmail__container .email__field .email::-webkit-input-placeholder {
@@ -287,14 +320,11 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
       .collectEmail .collectEmail__container .email__field .submit {
         color: white;
         border: none;
-        border-radius: 4px;
-        background-color: #17B3C1;
-        padding: .5em 3em;
-        margin: 1em auto; }
-        .collectEmail .collectEmail__container .email__field .submit button {
-          background-color: transparent;
-          color: white;
-          border: none; }
+        border-radius: 8px;
+        background-color: #E24AA3;
+        padding: .8em 3.5em;
+        text-decoration: none;
+        margin: auto; }
   @media screen and (max-width: 900px) {
     .collectEmail .collectEmail__container .email__field {
       flex-direction: column; }
