@@ -22,11 +22,11 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
     background-image: url("../img/week3_background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    color: $white;
+    color: $dark-purple;
     
     .intro__logo{
         width: 100%;
-        padding: 4em 0 0;
+        padding: 2em 2em;
 
         img{
             display: block;
@@ -34,12 +34,35 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
             margin: 0 auto;
         }
     }
-    .intro__title{
-        text-align: center;
-    }
     .intro__tagline{
         text-align: center;
+        background-color: rgba(#fff, .2);
+        padding: .5em 0 1.5em 0;
+        max-width: 1020px;
+        margin: auto;
+        
+        .intro__tagline__blurb {
+            padding: 0 0 20px 0;
+            max-width: 1020px;
+            margin: auto;
+        }
+        .intro__tagline__signup a {
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.5em;
+            color: $dark-purple;
+            border: none;
+            border-radius: 8px;
+            background-color: $medium-gray;
+            border: 2px solid $hot-pink;
+            padding: .8em 2em;
+            cursor: pointer;
+            margin: 2em 0;
+            
+        }
     }
+    
+    
 
     @include medium(){
         margin-top: 4.5em;
@@ -64,7 +87,7 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
 .sub-tagline {
     background-image: linear-gradient(to left, #240754, $black);
     color:white;
-    padding: 150px 0;
+    padding: 6em 0 8em 0;
 }
 
 .marketing {
@@ -73,11 +96,11 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
     /* background-size: cover; */
     background-repeat: no-repeat;
     background-position:right;
-    padding:4em 0;
+    padding:4em 2em;
 
     .centerblock {
         margin:auto;
-        max-width:1000px;
+        max-width:1400px;
         font-size:1.5em;
         text-align: center;
     }
@@ -118,21 +141,23 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
         flex-direction: column;
         .details_image{
             padding: 3em 2em;
+            // display:none;
         }
 
         .details_text{
-            padding: 3em 1em;
+            padding: 1em;
         }
     }
 
     @include small(){
         flex-direction: column;
         .details_image{
-            padding: 3em 2em;
+            // padding: 3em 2em;
+            display:none;
         }
 
         .details_text{
-            padding: 3em 1em;
+            padding: .5em;
         }
     }
 }
@@ -148,59 +173,56 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
   box-shadow: 0 1px 1px 1px rgba(0,0,0,0.3);
 
   .collectEmail__container{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em 0 4em 0;
-
-    h4{
-      color: $light-gray;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1em 0 4em 0;
       text-align: center;
-    }
 
-    .email__field{
-      display: flex;
-
-      .email{
-        flex: 1;
-        color: $dark-gray;
-        margin-right: auto;
-        font-size: 1.999em;
-        padding-left: .5em;
-
-        &::-webkit-input-placeholder{
-          color: $gray;
-        }
-        &:-ms-input-placeholder{
-          color: $gray;
-        }
-        &::-moz-placeholder{
-            color: $gray;
-        }
-        &:-moz-placeholder{
-          color: $gray;
-        }
+      h4{
+          color: $light-gray;
+          text-align: center;
       }
-      .submit{
-        color: $white;
-        border: none;
-//        border-radius: 0 4px 4px 0;
-        border-radius: 4px;
-        background-color: $green;
-//        padding: 0 .5em;
-        padding: .5em 3em;
 
-        //remove for full email field
-        margin: 1em auto;
+      .email__field{
+          // display: flex;
+          margin: 2em auto;
+          
 
-        button{
-          background-color: transparent;
+        .email{
+            // flex: 1;
+            color: $dark-gray;
+            // margin-right: auto;
+            font-size: 1.999em;
+            padding-left: .5em;
+
+            &::-webkit-input-placeholder{
+              color: $gray;
+            }
+            &:-ms-input-placeholder{
+              color: $gray;
+            }
+            &::-moz-placeholder{
+                color: $gray;
+            }
+            &:-moz-placeholder{
+              color: $gray;
+            }
+        }
+        .submit{
           color: $white;
-          border:none;
-        }
-      }
+          border: none;
+          border-radius: 8px;
+          background-color: $hot-pink;
+          padding: .8em 3.5em;
+          text-decoration: none;
 
-    }
+          //remove for full email field
+          margin: auto;
+
+        }
+
+      }
   }
   @include medium(){
 

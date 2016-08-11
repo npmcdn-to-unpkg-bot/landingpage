@@ -38,8 +38,25 @@
     }
 
     .title{
-      h4{
+      /* h4{
         margin: 0 0 0 .75em;
+      } */
+        height: 20px;
+        margin-left: 2em;
+
+      img{
+        height: 100%;
+        display: inline-block;
+        margin: auto;
+      }
+
+      @include medium(){
+        height: 15px;
+        margin-left: 1.5em;
+      }
+      @include small(){
+        height: 10px;
+        margin-left: 1.5em;
       }
     }
 
@@ -72,11 +89,9 @@
           &.contact{
             color: $white;
             border: none;
-            //        border-radius: 0 4px 4px 0;
-            border-radius: 4px;
-            background-color: $green;
-            //        padding: 0 .5em;
-            padding: .25em .75em;
+            border-radius: 8px;
+            background-color: $hot-pink;
+            padding: .8em 3.5em;
           }
         }
       }
