@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
+        gitinfo: {},
         jshint: {
             build: ['GruntFile.js', 'app/**/*.js']
         },
@@ -122,6 +122,19 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        // gzip assets 1-to-1 for production
+        compress: {
+          main: {
+            options: {
+              archive: 'target/<%=pkg.name%>-<%=pkg.version%>-<%=grunt.config("gitinfo").local.branch.current.SHA%>.tar.gz',
+              mode: 'tgz'
+            },
+            expand: true,
+            cwd: 'production/',
+            src: ['**/*'],
+            dest: ''
+          }
+        },
         shell: {
             runTests: {
                 command: function(platform, browser, version) {
@@ -156,6 +169,28 @@ module.exports = function(grunt) {
     // load tasks
     grunt.loadNpmTasks('grunt-parallel');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-gitinfo');
+    grunt.registerTask('writeVersionInfo', 'Write', function () {
+        var gitinfo = grunt.config('gitinfo');
+        var pkg = require('./package.json');
+        var text='Name ' + pkg.name + ':' + pkg.version +
+         '\nAuthor:  ' + gitinfo.local.branch.current.lastCommitAuthor +
+         '\nversion: ' + gitinfo.local.branch.current.SHA + 
+         '\nbranch:  ' + gitinfo.local.branch.current.name;
+
+        grunt.file.write('production/version.txt', text);
+        //console.log(gitinfo);
+    });
+
+    grunt.registerTask('version', 'version tasks', function() {
+        //Run gitinfo task
+        grunt.task.run('gitinfo');
+
+        //Run your write function
+        grunt.task.run('writeVersionInfo');
+    });
+
 
     // register tasks
     grunt.registerTask('default', ['parallel']);
@@ -167,6 +202,7 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('dev', ['jshint', 'compass:dev', 'connect', 'watch']);
-    grunt.registerTask('prod', ['clean', 'jshint', 'compass:prod', 'uglify:prod', 'copy', 'war']);
+    grunt.registerTask('prod', ['clean', 'version', 'jshint', 'compass:prod', 'uglify:prod', 'copy', 'compress']);
+
 
 };
