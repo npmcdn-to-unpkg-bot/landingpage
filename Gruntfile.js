@@ -122,6 +122,22 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        shell: {
+            runTests: {
+                command: function(platform, browser, version) {
+                  return 'PLATFORM='+platform+' BROWSER='+browser+' VERSION='+version+' ./node_modules/.bin/parallel-mocha test/*-spec.js'
+                }
+            }
+        },
+
+        parallel: {
+            assets: {
+                options: {
+                    grunt: true
+                },
+                tasks: ['run_XP_firefox_42',  'run_Windows10_edge', 'run_Windows7_ie_11']
+            }
+        },
         clean: {
             dist: ['production/**/*']
         }
@@ -137,8 +153,20 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    // load tasks
+    grunt.loadNpmTasks('grunt-parallel');
+    grunt.loadNpmTasks('grunt-shell');
+
+    // register tasks
+    grunt.registerTask('default', ['parallel']);
+
+    grunt.registerTask('run_XP_firefox_42', ['shell:runTests:XP:firefox:42']);
+    // grunt.registerTask('run_Linux_chrome_45', ['shell:runTests:Linux:chrome:45']);
+    grunt.registerTask('run_Windows10_edge', ['shell:runTests:"Windows 10":MicrosoftEdge:20.10240']);
+    grunt.registerTask('run_Windows7_ie_11', ['shell:runTests:"Windows 7":"internet explorer":11']);
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('dev', ['jshint', 'compass:dev', 'connect', 'watch']);
     grunt.registerTask('prod', ['clean', 'jshint', 'compass:prod', 'uglify:prod', 'copy', 'war']);
+
 };
