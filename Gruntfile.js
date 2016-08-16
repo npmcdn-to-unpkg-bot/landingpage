@@ -125,7 +125,7 @@ module.exports = function(grunt) {
         shell: {
             runTests: {
                 command: function(platform, browser, version) {
-                  return 'PLATFORM='+platform+' BROWSER='+browser+' VERSION='+version+' ./node_modules/.bin/parallel-mocha test/*-spec.js'
+                  return 'PLATFORM='+platform+' BROWSER='+browser+' VERSION='+version+' ./node_modules/.bin/parallel-mocha test/*-spec.js';
                 }
             }
         },

@@ -9,7 +9,7 @@ var assert = require('assert'),
       password: accessKey
     });
 
-test.describe('Google Search', function() {
+test.describe('Qubeship landingpage', function() {
   this.timeout(60000);
 
   var driver;
@@ -50,14 +50,21 @@ test.describe('Google Search', function() {
     }, done);
   })
 
-  test.it('searching for webdriver using google', function() {
-    driver.get('http://google.com');
-
-    var searchBox = driver.findElement(webdriver.By.name('q'));
-    searchBox.sendKeys('webdriver');
-    searchBox.getAttribute('value').then(function(value) {
-      assert.equal(value, 'webdriver');
+  test.it('Qubeship landingpage test', function() {
+    driver.get('https://qubeship.io');
+    driver.getTitle().then(function (title) {
+      console.log("title is: " + title);
+      assert.equal(title, '');
     });
-
   });
+
+test.it('Qubeship content test', function() {
+    driver.get('https://qubeship.io');
+    var content = driver.findElement(webdriver.By.xpath('//html/body/div[2]/div[2]/center/h3'));
+    content.getAttribute("innerHTML").then(function(innerHTML) {
+      console.log("text is: " + innerHTML);
+      assert.equal(innerHTML, 'Spend less time delivering code, and more time delivering value.');
+    });
+  });
+
 });
