@@ -1,3 +1,2 @@
 # landingpage
-Qubeship Landing Page
-test 1
+Source repository for Qubeship Landing Page
