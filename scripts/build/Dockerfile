@@ -1,0 +1,1 @@
+FROM gcr.io/qubeship/nodebase:0.2

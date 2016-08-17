@@ -152,7 +152,7 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            dist: ['production/**/*']
+            dist: ['production/**/*', 'target/**/*']
         }
 
     });
