@@ -54,7 +54,8 @@ test.describe('Qubeship landingpage', function() {
     driver.get('https://qubeship.io');
     driver.getTitle().then(function (title) {
       console.log("title is: " + title);
-      assert.equal(title, '');
+      assert(title !== '');
+      // assert.equal(title, '');
     });
   });
 
