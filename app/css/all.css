@@ -197,7 +197,7 @@ background-image: linear-gradient(to bottom, transparent 80%, $purple),repeating
       margin: 0 auto; }
   .intro .intro__tagline {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: .5em 0 1.5em 0;
     max-width: 1020px;
     margin: auto; }
