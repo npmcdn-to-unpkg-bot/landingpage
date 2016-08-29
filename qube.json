@@ -2,17 +2,12 @@
 	"security": {
 		"keys_loc": "conf/"
 	},
-	"build": {
-		"skip": false
-	},
 	"test": {
-		"skip": false,
 		"functional": {
 			"provider": "saucelabs"
 		}
 	},
 	"bake": {
-		"skip": false,
 		"registry_prefix": "gcr.io" 
 	},
 	"deployment": {
