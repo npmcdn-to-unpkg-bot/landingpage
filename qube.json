@@ -1,5 +1,28 @@
 {
-	"cloud_project": "qubeship",
-	"ns": "production",
-	"keys_loc": "conf/"
+	"security": {
+		"keys_loc": "conf/"
+	},
+	"build": {
+		"skip": false
+	},
+	"test": {
+		"skip": false,
+		"functional": {
+			"provider": "saucelabs"
+		}
+	},
+	"bake": {
+		"skip": false,
+		"registry_prefix": "gcr.io" 
+	},
+	"deployment": {
+		"continuous_deployment": true,
+		"environments": {
+			"prod": {
+				"type": "custom",
+				"provider": "k8s",
+				"namespace": "prod"
+			}
+		}
+	}
 }
