@@ -1,6 +1,6 @@
 ---
 security:
-  keys_loc: conf/
+  keys_loc: "conf/"
 test:
   functional:
     provider: saucelabs
@@ -14,3 +14,11 @@ deployment:
       type: custom
       provider: k8s
       namespace: prod
+      id: "qube-1-1" #cluster id
+      template_id: qube_external_app_v1
+    qa: 
+      namespace: qa
+      provider: k8s
+      id: "qube_qa" #cluster id
+      type: qubeship_managed
+      template_id: qube_external_app_v1
