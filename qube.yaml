@@ -1,0 +1,16 @@
+---
+security:
+  keys_loc: conf/
+test:
+  functional:
+    provider: saucelabs
+bake:
+  registry_prefix: gcr.io/qubeship
+  registry_type: gcr
+deployment:
+  continuous_deployment: true
+  environments:
+    prod:
+      type: custom
+      provider: k8s
+      namespace: prod
