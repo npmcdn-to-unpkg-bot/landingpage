@@ -4,12 +4,14 @@ language: node
 pipeline: build_bake_test_deployment:v0.1
 security:
   keys_loc: "conf/"
-test:
-  functional:
-    provider: saucelabs
+build:
+  lint: true
 bake:
   registry_prefix: gcr.io/qubeship
   registry_type: gcr
+test:
+  functional:
+    provider: saucelabs
 deployment:
   continuous_deployment: true
   environments:
@@ -17,6 +19,12 @@ deployment:
       namespace: qa
       provider: cloudfoundry
       id: "development" # Cloud Foundry space
+      type: qubeship_managed
+      template_id: qube_external_app_v1
+    stage: 
+      namespace: stage
+      provider: ecs
+      id: "qube_stage" #cluster id
       type: qubeship_managed
       template_id: qube_external_app_v1
     prod:
