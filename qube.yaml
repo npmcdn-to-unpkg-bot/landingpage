@@ -1,0 +1,35 @@
+---
+name: landingpage
+language: node
+pipeline: build_bake_test_deployment:v0.1
+security:
+  keys_loc: "conf/"
+test:
+  functional:
+    provider: saucelabs
+bake:
+  registry_prefix: gcr.io/qubeship
+  registry_type: gcr
+deployment:
+  continuous_deployment: true
+  environments:
+    qa: 
+      namespace: qa
+      provider: cloudfoundry
+      id: "development" # Cloud Foundry space
+      type: qubeship_managed
+      template_id: qube_external_app_v1
+    prod:
+      type: custom
+      provider: k8s
+      namespace: production
+      id: "qube-1-1" #cluster id
+      template_id: qube_external_app_v1
+notifications:
+  send_to_slack:
+    integration: slack
+    channel: ['qubeship']
+    events: [all]
+  email:
+    enabled: false
+    events: [started]
