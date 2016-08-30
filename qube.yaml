@@ -13,7 +13,7 @@ deployment:
     prod:
       type: custom
       provider: k8s
-      namespace: prod
+      namespace: production
       id: "qube-1-1" #cluster id
       template_id: qube_external_app_v1
     qa: 
