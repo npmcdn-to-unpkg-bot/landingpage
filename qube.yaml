@@ -1,4 +1,7 @@
 ---
+name: landingpage
+language: node
+pipeline: build_bake_test_deployment:v0.1
 security:
   keys_loc: "conf/"
 test:
@@ -10,15 +13,23 @@ bake:
 deployment:
   continuous_deployment: true
   environments:
+    qa: 
+      namespace: qa
+      provider: cloudfoundry
+      id: "development" # Cloud Foundry space
+      type: qubeship_managed
+      template_id: qube_external_app_v1
     prod:
       type: custom
       provider: k8s
       namespace: production
       id: "qube-1-1" #cluster id
       template_id: qube_external_app_v1
-    qa: 
-      namespace: qa
-      provider: k8s
-      id: "qube_qa" #cluster id
-      type: qubeship_managed
-      template_id: qube_external_app_v1
+notifications:
+  send_to_slack:
+    integration: slack
+    channel: ['qubeship']
+    events: [all]
+  email:
+    enabled: false
+    events: [started]
