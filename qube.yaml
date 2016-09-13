@@ -16,8 +16,8 @@ bake:
   script: scripts/bake/Dockerfile
 test:
   functional:
-    provider: saucelabs
-    #provider: qubeship-sg
+    #provider: saucelabs
+    provider: qubeship-sg
 deployment:
   continuous_deployment: true
   environments:
