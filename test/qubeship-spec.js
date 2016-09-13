@@ -18,8 +18,12 @@ test.describe('Qubeship landingpage', function() {
     var browser = process.env.BROWSER,
         version = process.env.VERSION,
         platform = process.env.PLATFORM,
+        host = process.env.HOST,
+        port = process.env.PORT,
+        hostport = host + ":" + port ,
         server = "http://" + username + ":" + accessKey + 
-                  "@ondemand.saucelabs.com:80/wd/hub"; 
+                  "@" + hostport + "/wd/hub"; 
+      console.log("in beforeeach " );
 
     driver = new webdriver.Builder().
       withCapabilities({
@@ -42,30 +46,37 @@ test.describe('Qubeship landingpage', function() {
     var title = this.currentTest.title,
         passed = (this.currentTest.state === 'passed') ? true : false;
 
+    driver.close();
     driver.quit();
-
-    saucelabs.updateJob(driver.sessionID, {
-      name: title,
-      passed: passed
-    }, done);
+    if(process.env.HOST == 'ondemand.saucelabs.com') {
+      saucelabs.updateJob(driver.sessionID, {
+        name: title,
+        passed: passed
+      }, done);
+    }else {
+      done();
+    }
   })
 
-  test.it('Qubeship landingpage test', function() {
+  test.it('Qubeship landingpage test', function(done) {
     driver.get('https://qubeship.io');
     driver.getTitle().then(function (title) {
       console.log("title is: " + title);
       assert(title !== '');
       // assert.equal(title, '');
     });
+    done();
   });
 
-test.it('Qubeship content test', function() {
+test.it('Qubeship content test', function(done) {
     driver.get('https://qubeship.io');
     var content = driver.findElement(webdriver.By.xpath('//html/body/div[2]/div[2]/center/h3'));
     content.getAttribute("innerHTML").then(function(innerHTML) {
       console.log("text is: " + innerHTML);
       assert.equal(innerHTML, 'Spend less time delivering code, and more time delivering value.');
     });
+    done();
+
   });
 
 });
