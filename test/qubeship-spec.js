@@ -2,8 +2,8 @@ var assert = require('assert'),
     test = require('selenium-webdriver/testing'),
     webdriver = require('selenium-webdriver'),
     SauceLabs = require("saucelabs"),
-    username = process.env.SAUCE_USERNAME,
-    accessKey = process.env.SAUCE_ACCESS_KEY,
+    username = process.env.SELENIUM_USERNAME,
+    accessKey = process.env.SELENIUM_ACCESS_KEY,
     saucelabs = new SauceLabs({
       username: username,
       password: accessKey
