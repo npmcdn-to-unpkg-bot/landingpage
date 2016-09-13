@@ -18,12 +18,10 @@ test.describe('Qubeship landingpage', function() {
     var browser = process.env.BROWSER,
         version = process.env.VERSION,
         platform = process.env.PLATFORM,
-        host = process.env.HOST,
-        port = process.env.PORT,
-        hostport = host + ":" + port ,
+        hostport = process.env.SELENIUM_GRID,
         server = "http://" + username + ":" + accessKey + 
                   "@" + hostport + "/wd/hub"; 
-      console.log("in beforeeach " );
+      console.log("in beforeeach " + hostport);
 
     driver = new webdriver.Builder().
       withCapabilities({
@@ -48,7 +46,7 @@ test.describe('Qubeship landingpage', function() {
 
     driver.close();
     driver.quit();
-    if(process.env.HOST == 'ondemand.saucelabs.com') {
+    if(process.env.SELENIUM_GRID == 'ondemand.saucelabs.com:80') {
       saucelabs.updateJob(driver.sessionID, {
         name: title,
         passed: passed

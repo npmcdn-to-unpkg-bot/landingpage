@@ -137,8 +137,8 @@ module.exports = function(grunt) {
         },
         shell: {
             runTests: {
-                command: function(host,port, platform, browser, version) {
-                  return 'HOST='+ host + ' PORT=' + port +' PLATFORM='+platform+' BROWSER='+browser+' VERSION='+version+' ./node_modules/.bin/parallel-mocha test/*-spec.js';
+                command: function(platform, browser, version) {
+                  return 'PLATFORM='+platform+' BROWSER='+browser+' VERSION='+version+' ./node_modules/.bin/parallel-mocha test/*-spec.js';
                 }
             }
         },
@@ -196,13 +196,13 @@ module.exports = function(grunt) {
     // register tasks
     grunt.registerTask('default', ['parallel']);
 //ondemand.saucelabs.com
-    grunt.registerTask('run_XP_firefox_42', ['shell:runTests:ondemand.saucelabs.com:80:XP:firefox:42']);
+    grunt.registerTask('run_XP_firefox_42', ['shell:runTests:XP:firefox:42']);
     // grunt.registerTask('run_Linux_chrome_45', ['shell:runTests:Linux:chrome:45']);
-    grunt.registerTask('run_Windows10_edge', ['shell:runTests:ondemand.saucelabs.com:80:"Windows 10":MicrosoftEdge:20.10240']);
-    grunt.registerTask('run_Windows7_ie_11', ['shell:runTests:ondemand.saucelabs.com:80:"Windows 7":"internet explorer":11']);
+    grunt.registerTask('run_Windows10_edge', ['shell:runTests:"Windows 10":MicrosoftEdge:20.10240']);
+    grunt.registerTask('run_Windows7_ie_11', ['shell:runTests:"Windows 7":"internet explorer":11']);
 
-    grunt.registerTask('run_linux_firefox', ['shell:runTests:sg.qubeship.io:80:Linux:firefox:']);
-    grunt.registerTask('run_linux_chrome', ['shell:runTests:sg.qubeship.io:80:Linux:chrome:']);
+    grunt.registerTask('run_linux_firefox', ['shell:runTests:Linux:firefox:']);
+    grunt.registerTask('run_linux_chrome', ['shell:runTests:Linux:chrome:']);
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.

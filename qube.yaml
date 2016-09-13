@@ -5,13 +5,19 @@ pipeline: build_bake_test_deployment:v0.1
 security:
   keys_loc: "conf/"
 build:
+  before_install:
+  script: scripts/build/build.sh
+  publish_artifact: target/app*.tgz
   lint: true
 bake:
   registry_prefix: gcr.io/qubeship
   registry_type: gcr
+  strategy: docker
+  script: scripts/bake/Dockerfile
 test:
   functional:
-    provider: saucelabs
+    #provider: saucelabs
+    provider: qubeship-sg
 deployment:
   continuous_deployment: true
   environments:
